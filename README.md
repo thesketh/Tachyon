@@ -2,22 +2,20 @@
 
 Tachyon is an efficient, parallelised raytracer, written by John Stone (http://www.ks.uiuc.edu/~johns/) for use in scientific visualisation applications. The current version is 0.99b6, released in 2013.
 
-This was uploaded to GitHub as the download link has been broken recently.
+This was uploaded to GitHub as the download link has been broken recently. The original package README is given below.
 
-# Original Package README
+```$Id: README,v 1.28 2013/04/21 19:32:42 johns Exp $```
 
-$Id: README,v 1.28 2013/04/21 19:32:42 johns Exp $
-
-README for Tachyon(tm) Parallel/Multiprocessor Ray Tracing Software
--------------------------------------------------------------------
+## README for Tachyon(tm) Parallel/Multiprocessor Ray Tracing Software
+----------------------------------------------------------------------
 Tachyon - 1967, from Greek "tachys", meaning "swift" or "speedy",
           A hypothetical particle held to travel only faster than light.
 
 Author: John E. Stone - john.stone@gmail.com (preferred email address) 
                         johns@ks.uiuc.edu    (work email address)
 
-What is Tachyon?
-----------------
+## What is Tachyon?
+-------------------
   Tachyon was originally written as part of my M.S. degree in Computer Science, 
   but I have made an ongoing effort to maintain and improve at as a
   hobby, and for the benefit of the molecular visualization community where
@@ -58,8 +56,8 @@ What is Tachyon?
     the example scenes require texture maps and/or volume data sets
     which are distributed seperately due to their large size.
 
-How do I compile and run Tachyon?
----------------------------------
+## How do I compile and run Tachyon?
+------------------------------------
   The build process is quite simple.  On Unix, just "cd" into the 
   unix directory and type "make".  You wil see a list of common
   configurations that can be built.  This will work fine for almost 
@@ -89,8 +87,8 @@ How do I compile and run Tachyon?
   on platforms that aren't built into the makefiles that come with the
   distribution.
 
-How can I contribute to further development?
---------------------------------------------
+## How can I contribute to further development?
+-----------------------------------------------
   I continue to work on this software in my free time.  I depend
   on other individuals or institutions to provide me access to 
   the various parallel computers and compilers that Tachyon supports 
@@ -100,8 +98,8 @@ How can I contribute to further development?
   I would be happy to collaborate with others on extending 
   Tachyon for a wider variety of uses. 
 
-Copyrights etc.
----------------
+## Copyrights etc.
+------------------
   All work included in this distribution is copyrighted by John E. Stone,
   except where noted within specific source files.  You may use this code
   for any purpose you wish, as long as credit is given to its source(s). 
