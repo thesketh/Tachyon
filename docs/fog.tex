@@ -1,0 +1,29 @@
+
+\subsection{Atmospheric effects}
+Tachyon currently only implements one atmospheric effect, 
+simple distance-based fog.
+
+\subsubsection{Fog}
+\index{fog}
+Tachyon provides a simple distance-based fog effect intended to provide
+functionality similar to that found in OpenGL, for compatibility with
+software that requires an OpenGL-like fog implementation.  Much like
+OpenGL, Tachyon provides linear, exponential, and exponential-squared fog.
+
+\begin{verbatim}
+  FOG 
+    LINEAR START 0.0  END 50.0  DENSITY 1.0  COLOR 1.0 1.0 1.0
+\end{verbatim}
+
+\begin{verbatim}
+  FOG 
+    EXP START 0.0  END 50.0  DENSITY 1.0  COLOR 1.0 1.0 1.0
+\end{verbatim}
+
+\begin{verbatim}
+  FOG 
+    EXP2 START 0.0  END 50.0  DENSITY 1.0  COLOR 1.0 1.0 1.0
+\end{verbatim}
+
+
+

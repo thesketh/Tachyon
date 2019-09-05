@@ -1,0 +1,31 @@
+This directory contains volume data derived from an MR scan of a human
+head.  The data is in .den format (see the file format description in
+../README.format) and has been compressed.
+
+The original MR scan is from the Chapel Hill Volume Rendering Test
+Dataset, Volume I (available from omicron.cs.unc.edu [128.109.136.159]
+in pub/softlab/CHVRTD/volI).  The data was taken on the Siemens Magnetom
+and provided courtesy of Siemens Medical Systems, Inc., Iselin, NJ.
+You may redistribute this data provided you include the above
+information about the source of the data.
+
+Contents:
+
+brain.den.Z		256x256x109 voxel data set
+			the voxels must be scaled 1.54x in the Z dimension
+
+brainsmall.den.Z	128x128x84 voxel data set derived from brain.den
+			by applying a Gaussian filter; no further scaling
+			is necessary
+
+bigbrain.den.Z		256x256x167 voxel data set derived from brain.den
+			by applying a cubic bspline filter; no further
+			scaling is necessary
+
+brainsmall.vprdemo	rendering parameters for brainsmall.den
+                        (use with the "vprdemo" program that
+                        comes with vprender)
+
+bigbrain.vprdemo	rendering parameters for bigbrain.den
+			(use with the "vprdemo" program that
+			comes with vprender)

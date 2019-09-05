@@ -1,0 +1,16 @@
+This directory contains a collection of volume data sets.
+
+Contents:
+
+README.format		file format description
+
+denfile.c		sample code to read .den files
+
+dencopy.c		sample program which uses denfile.c to copy a volume,
+			possibly converting it to the native byte ordering
+
+head/			CT scan of a human head (several resolutions)
+
+brain/			MR scan of a human head (several resolutions)
+
+engine/			CT scan of an engine block

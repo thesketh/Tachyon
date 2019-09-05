@@ -1,0 +1,15 @@
+This directory contains volume data acquired from a CT scan of an
+engine block.  The data is in .den format (see the file format
+description in ../README.format) and has been compressed.
+
+This data is in the public domain.
+
+Contents:
+
+engine.den.Z		256x256x110 voxel data set
+			the aspect ratio is uniform in all three
+			dimensions (no scaling is necessary)
+
+engine.vprdemo		rendering parameters for engine.den
+			(use with the "vprdemo" program that
+			comes with vprender)

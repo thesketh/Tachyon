@@ -1,0 +1,46 @@
+This README file describes the format of the volume data files in this
+directory.
+
+.DEN FILES
+----------
+Files with names ending in .den contain a header followed by a 3D
+array of byte samples.  The header describes the size of the array
+(and has other random fields for historical reasons).  The file
+"denfile.c" contains sample code to read and write .den files.  Here
+is the header definition:
+
+    short map_version;		/* Version of this .den file                 */
+
+    short orig_min[3];		/* Dimensions of original data file          */
+    short orig_max[3];
+    short orig_len[3];
+
+    short extr_min[3];		/* Extracted portion of original file        */
+    short extr_max[3];		/*   (mins and maxes will be subset of       */
+    short extr_len[3];		/*    orig and lengths will be <= orig)      */
+
+    short map_min[3];		/* Dimensions of this map                    */
+    short map_max[3];		/*   (mins will be 0 in this program and     */
+    short map_len[3];		/*    lens may be != extr if warps > 0)      */
+
+    short map_warps;		/* Number of warps since extraction          */
+				/*   (0 = none)                              */
+
+    int map_length;		/* Total number of densities in map          */
+				/*   (= product of lens)                     */
+
+The map_version field contains the value "1".  The map_len array
+contains the size of the data set, and the map_length field contains
+the number of bytes in the volume array.  It should always be equal to
+the product of the entries in map_len.  The other fields are not
+normally useful.
+
+After the header comes the volume data, stored as a sequence of bytes.
+The X dimension (map_len[0]) varies most rapidly, and the Z dimension
+(map_len[2]) varies least rapidly.
+
+The files were written on an SGI workstation which is a big-endian
+machine.  If you read the files on a little-endian machine (e.g. DEC
+or Intel) then all of the numbers in the header will have to be
+byte-swapped.  However, since the volume data consists of byte data it
+does not have to be swapped.

@@ -1,0 +1,62 @@
+\section{Compiling Tachyon From Source Code}
+\index{compiling on Unix systems}
+  In order to use Tachyon, particularly on distributed memory
+parallel computers, you may need to compile it from source code.
+Compilation of Tachyon is a fairly straightforward process.  
+Once the Tachyon distribution has been downloaded from the 
+web site, unpack the distribution using gunzip and tar.
+Once the distribution is unpacked, change directory into the 
+'tachyon' subdirectory, and then into the 'unix' directory.  
+Once in the 'unix' directory, type {\tt make} to see the list of 
+configurations that are currently supported.
+To compile Tachyon for most platform targets, one need only run 
+{\tt make platform-name-string}.  The resulting
+Tachyon executable and library files are contained within a 
+subdirectory of the 'tachyon/compile' directory, named to match
+the compilation target.
+
+Hopefully once you've run 'make' to build Tachyon, 
+everything went well and you now have a binary to run.  If you are building
+a version that uses MPI, OpenGL, or other special features,
+you may need to edit the {\tt Make-config} file to edit the 
+locations of libraries and header files needed for compilation.
+If you have trouble, for now the best way to go is to send me email, at
+{\em \EMAIL}  As I have time, I plan to improve this document and provide
+more detailed instructions on compilation.
+
+\begin{figure}[tb]
+\begin{center}
+%        xleftmargin=0pt,
+%        xrightmargin=0pt
+\lstset{numbers=none,
+        frame=lines,
+        basicstyle=\small,
+        language={},
+        commentstyle=\color{blue},
+        }
+\begin{lstlisting}
+johns:/tmp % gunzip tachyon.tar.gz
+johns:/tmp % tar -xvf tachyon.tar.gz
+johns:/tmp % cd tachyon
+johns:/tmp/tachyon % cd unix
+johns:/tmp/tachyon/unix % make
+  Choose one of the architectures specified below.
+----------------------------------------------------
+              Parallel Versions        
+
+    linux-mpi - Linux            Generic MPI           
+    linux-thr - Linux            POSIX Threads          
+
+[... Trimmed for brevity ...]
+
+        clean - Remove .o .a and executables
+---------------------------------------------------
+Type 'make arch' to build a target listed above.
+
+johns:/tmp/tachyon/unix % make linux-thr
+\end{lstlisting}
+\end{center}
+ \caption{Example Tachyon compilation steps.}
+ \label{fig:perspcamera}
+\end{figure}
+
